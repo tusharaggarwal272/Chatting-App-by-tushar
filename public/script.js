@@ -22,4 +22,5 @@ $('#send-btn').click(()=>{
 socket.on('recieved_msg',(data)=>{
     // console.log(data);
     $('#chat').append(`<li><strong>${data.user} </strong> : ${data.msg}</li>`)
+    $('#chat').scrollTop($('#chat').outerHeight());
 })
